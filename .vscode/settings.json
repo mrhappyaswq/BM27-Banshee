@@ -1,0 +1,15 @@
+{
+  "VsCodeTaskButtons.showCounter": false,
+  "VsCodeTaskButtons.tasks": [
+    {
+      "label": "$(cloud-upload) Upload ESP32",
+      "task": "ESP32: Upload and restart",
+      "tooltip": "Copy MicroPython files to ESP32 and restart"
+    },
+    {
+      "label": "$(terminal) ESP32 Monitor",
+      "task": "ESP32: Monitor",
+      "tooltip": "Open the MicroPython serial monitor"
+    }
+  ]
+}
