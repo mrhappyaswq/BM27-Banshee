@@ -13,6 +13,17 @@ receive valid MAVLink HEARTBEAT packets from a Pixhawk. It does not arm, fly,
 land, send MAVLink messages, or perform ArUco vision. See
 [`docs/porting-audit.md`](docs/porting-audit.md).
 
+```mermaid
+flowchart LR
+    Pixhawk[Pixhawk autopilot] -->|MAVLink HEARTBEAT| ESP32[ESP32 receive and parse]
+    ESP32 -->|USB status text| Laptop[VS Code serial monitor]
+    Upload[VS Code upload task] -->|MicroPython files| ESP32
+```
+
+**[View the BANSHEE system diagrams and feature map](docs/system-overview.md)**
+to see the current ESP32 data path, every desktop sample, and which pieces are
+separate examples.
+
 ## 1. Install the Windows tools
 
 Install [VS Code](https://code.visualstudio.com/download),
