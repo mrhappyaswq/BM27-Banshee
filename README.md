@@ -68,6 +68,8 @@ Click **Upload ESP32** in the VS Code status bar. It copies both files in
 `device/` to the ESP32 filesystem as `mavlink_rx.py` and `main.py`, then hard
 resets the board. `main.py` runs again after every reset. The same task runs
 with **Ctrl+Shift+B** or **Terminal > Run Build Task**.
+The upload task waits two seconds after opening the serial port because some
+ESP32 boards reset when the port opens.
 
 Click **ESP32 Monitor** to read its output. With no Pixhawk connected, expect
 `BANSHEE ESP32 MicroPython check`, then an `Alive` report every five seconds.

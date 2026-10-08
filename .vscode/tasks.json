@@ -6,7 +6,7 @@
       "type": "process",
       "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
       "args": [
-        "-m", "mpremote", "connect", "auto",
+        "-m", "mpremote", "connect", "auto", "sleep", "2",
         "cp", "device/mavlink_rx.py", ":mavlink_rx.py", "+",
         "cp", "device/main.py", ":main.py", "+",
         "reset"
